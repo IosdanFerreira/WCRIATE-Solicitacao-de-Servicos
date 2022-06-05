@@ -1,13 +1,17 @@
-let email = document.getElementById('email');
-let password = document.getElementById('password');
-let emailValidation = document.getElementById('emailValidation');
-let passwordlValidation = document.getElementById('passwordValidation');
+let email = document.getElementById('email'); //input do email
+let password = document.getElementById('password'); //input do password
+let inputs = document.querySelectorAll('.input') //os dois inputs em uma variável  
 
-function login() {
-    if (email.value == ""){
-        emailValidation.classList.remove('hiden')
+inputs.forEach((inputs) => inputs.addEventListener('input', handleChange)) //verificar alteração dos inputs
 
-    } if (password.value == "" && password.value < 8){
-        passwordValidation.classList.remove('hiden')
+function handleChange() { //remover e adicionar disabled do botão de login
+    let btnLogin = document.querySelector('.btn-login');
+    if (email.value && password.value.length >= 8) {
+        btnLogin.removeAttribute('disabled');
+    } else {
+        btnLogin.setAttribute('disabled', '');
     }
 }
+
+
+

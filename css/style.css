@@ -1,3 +1,4 @@
+@import url(../views/dashboard.html);
 
 /*Paleta de cores*/
 .bg-primary-color{
@@ -31,10 +32,29 @@
     font-weight: 300;
 }
 
-/*Login display*/
+/*Inputs Validação*/
+.validation{
+    color:red;
+    font-size:10pt;
+}
+.hiden{
+    display:none;
+}
+
+/*Botão login*/
 
 .linkBotao{
     text-decoration: none;
+}
+
+.btn-login:disabled{
+    background-color: rgb(175, 175, 175);
+    color:rgb(109, 109, 109);
+}
+
+.btn-login:disabled:hover{
+    background-color: rgb(175, 175, 175);
+    color:rgb(109, 109, 109);
 }
 
 .btn-login{
@@ -45,18 +65,8 @@
 }
 
 .btn-login:hover{
-    background-color: #669600;
+    background-color: #5b8500;
     color:white;
-    border:none;
-}
-
-/*Inputs Validação*/
-.validation{
-    color:red;
-    font-size:10pt;
-}
-.hiden{
-    display:none;
 }
 
 /*Links de Recuperação*/
@@ -76,4 +86,32 @@
 .links-recuperacao a:hover{
     color: white;
     text-decoration: underline;
+}
+
+/*Dashboard links*/
+
+.nav-link:hover{
+    text-decoration: underline;
+}
+
+/*Nav-mobile*/
+
+.nav-mobile{
+    height: 50px;
+    width: 100%;
+}
+.nav-mobile img{
+    width: 150px;
+    margin:0 auto;
+}
+
+.btn-menu-mobile{
+    background-color: transparent;
+    color: #8AC900;
+    border:1px solid #8AC900;
+    border-radius:5px;
+    font-size:18pt;
+    height:35px;
+    width: 33px;
+    margin:auto 8px auto -35px;
 }
