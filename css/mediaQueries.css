@@ -1,0 +1,9 @@
+@media (max-width: 620px){
+    #dashboardDesktop{
+        display:none;
+    }
+
+    #navMobile{
+        display: flex;
+    }
+}

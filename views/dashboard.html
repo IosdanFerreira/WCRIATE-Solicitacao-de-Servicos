@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
     <!-- Font Google-fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,14 +18,17 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- CSS Local -->
     <link rel="stylesheet" href="../css/style.css">
+    <!-- CSS Media Queries -->
+    <link rel="stylesheet" href="../css/mediaQueries.css">
     <title>Dashborad</title>
 </head>
 
 <body class="d-flex" style="background-color: rgba(128, 128, 128, 0.212);">
 
-    <!--Dashboard links-->
+    <!--Dashboard-desktop-->
     <!--RETIRAR .D-NONE PARA DESKTOP!!-->
-    <div class="d-none d-flex flex-column flex-shrink-0 p-3 text-white bg-dark-color" style="width: 270px; height:100vh;">
+    <div class="p-3 text-white bg-dark-color dashboardDesktop" style="width: 270px; height:100vh;"
+        id="dashboardDesktop">
         <!--logo-->
         <img src="../images/logo.png" alt="">
         <hr>
@@ -66,11 +69,58 @@
             </li>
         </ul>
     </div>
-    
-    <div class="d-flex flex-row bg-dark-color nav-mobile">
+
+    <!--navbar-mobile-->
+    <div class="bg-dark-color nav-mobile" id="navMobile">
         <img class="img-fluid" src="../images/logo.png" alt="">
 
-        <button class="btn-menu-mobile" type="button"><i class="bi bi-list"></i></button>
+        <button class="btn-menu-mobile" type="button" data-bs-toggle="offcanvas" href="#dashboardMobile" role="button"
+            aria-controls="offcanvasExample"><i class="bi bi-list"></i></button>
+    </div>
+
+    <!--Dashboard versão Mobile-->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="dashboardMobile" aria-labelledby="offcanvasExampleLabel"
+        style="width: 73vw;">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark-color" style="width: 100%; height:100vh;"
+            id="dashboardDesktop">
+            <!--logo Mobile-->
+            <img src="../images/logo.png" alt="">
+            <hr>
+
+            <ul class="nav nav-pills flex-column mb-auto">
+
+                <!-- Serviços contratados Mobile -->
+                <li class="nav-item ">
+                    <a href="#" class="nav-link active mb-2 fs-6" style="background-color: #89c900;"
+                        aria-current="page">
+                        <i class="bi bi-card-checklist fs-3"></i><span style="margin-left:8px;">Serviços
+                            Contratados</span>
+                    </a>
+                </li>
+
+                <!--Solicitar serviços Mobile -->
+                <li>
+                    <a href="#" class="nav-link text-white mb-2 fs-6">
+                        <i class="bi bi-pencil-square fs-3"></i><span style="margin-left:8px;">Solicitar Serviços</span>
+                    </a>
+                </li>
+
+                <!--Perfil Mobile-->
+                <li>
+                    <a href="#" class="nav-link text-white fs-6">
+                        <i class="bi bi-person-circle fs-3"></i><span style="margin-left:8px;">Perfil</span>
+                    </a>
+                </li>
+
+                <!--Sair Mobile-->
+                <li>
+                    <a href="#" class="nav-link text-white link-sair pt-3 fs-6"
+                        style="border-top: 1px solid gray; border-radius:0px;">
+                        <i class="bi bi-door-open-fill fs-3"></i><span style="margin-left:8px;">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <!-- JavaScript BootStrap -->
